@@ -141,7 +141,7 @@ header a {
     transition: max-height 0.2s ease-out;
     overflow: hidden;
     margin: 0;
-    padding: 0;
+    padding: 0px;
     background-color: #fff;
     display: flex;
     flex-direction: column;
@@ -170,22 +170,20 @@ header a {
     top: 0;
   }
 
-/* Mobile navigation extra menu styling */
-  .nav-font-mobile {
+/* Navigation extra menu styling */
+  .nav-font {
     font-size: 20px;
     font-weight: bold;
   }
-
-
-/* Navigation bar - desktop */
-
-.nav-font-desktop {
-    font-size: 30px;
-    font-weight: bold;
-    text-align: right;
-}
-
-
+  .nav-font a:hover {
+    color: #fff
+  }
+  .nav-item-border {
+  border-bottom: 1px solid rgb(0, 0, 87);
+  }
+  .menu a:hover {
+  background-color: rgb(0, 0, 87);
+  }
 
 /* Navigation bar - responsive break points */
 
