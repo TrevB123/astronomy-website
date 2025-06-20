@@ -18,24 +18,94 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-        <!-- The main site-wide header -->
-        <header>
-            <a href="./index.htm"><img src="./assets/images/astronomy-club-logo-sm.png" class="header-logo" width="100px" height="100px"></a>
-                <input class="menu-btn" type="checkbox" id="menu-btn" name="menu-btn" />
+        <!-- The main site-wide header just using flexbox and make responsive as possible -->
+      
+        <header class="header-container">
+                <div id="header-logo">
+                    <a href="./index.htm"><img src="./assets/images/astronomy-club-logo-sm.png" class="header-logo" width="100px" height="100px"></a>
+                </div>
+                <div id="header-logo">
+                    <a href="./index.htm"><img src="./assets/images/yorkastrosoc.png" width="250px"></a>
+                 </div>
+            <!-- menu in the header -->
+              
+                 <div class="nav-menu-container">
+                        <a class="nav-menu-button" href="#">Home</a>
+                        <a class="nav-menu-button" href="#">Join Us</a>
+                        <a class="nav-menu-button" href="#">Events</a>
+                        <a class="nav-menu-button" href="#">About Us</a>
+                        <a class="nav-menu-button" href="#">Contact</a>
+                        <a class="nav-menu-button" href="#">Login</a>
+                </div>
+
+                <!-- alternative menu using CSS grid - STRETCH GOAL FOR ME! 
+                 <input class="menu-btn" type="checkbox" id="menu-btn" name="menu-btn" />
                     <label class="menu-icon open-menu-label" for="menu-btn">
                         <span class="navicon" area-label="Hamburger menu 'icon'" />
-                    </label>
-                    <nav class="menu nav-font">
+                    </label>    
+                       <nav class="menu nav-font">
                         <a class="nav-item nav-item-border" href="#">Home</a>
                         <a class="nav-item nav-item-border" href="#">Join Us</a>
                         <a class="nav-item nav-item-border" href="#">Events</a>
                         <a class="nav-item nav-item-border" href="#">About Us</a>
+                        <a class="nav-item nav-item-border" href="#">Contact</a>
                         <a class="nav-item nav-item-border" href="#">More</a>
-                    </nav>
+                    </nav> 
+                -->
        </header>
 
-  
+        <!-- Main section including flexbox sections of various block sizes mobile friendly -->
+       <section>
+       <article>
+        <div class="column-outer-margin">
+            <div class=“boxes”>
+	            <div class="columns">
+		            <div class="col col-hp-top-100 background-cover">
+                        <div class="middle-align">
+			            <h2>Our membership is out of this world! Join us today and we'll send you a free sky at night book. Whether you are an avid skywatcher or completely new to astronomy we're here to help you discover the secrets of the universe!</h2>
+                        <div class="nav-menu-container">
+                        <a class="nav-menu-button" href="#">Join Now</a>
+                        </div>
+                        </div>
+		            </div>
+                    <div class="col col-33">
+			            <p>June 2025</p>
+                        <h2>What can you see in the night's sky in June 2025?<h2>
+		            </div>
+		            <div class="col col-33">
+			            <p>May 2025</p>
+                        <h2>Which is the best telescope for a beginner?<h2>
+		            </div>
+		            <div class="col col-33">
+			            <p>March 2025</p>
+                        <h2>Is Space X on track for Mars in 2026?<h2></h2>
+		            </div>
+		            <div class="col col-50">
+			            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+		            </div>
+		            <div class="col col-50">
+			            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+		            </div>
+                    <div class="col col-33">
+			            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+		            </div>
+		            <div class="col col-33">
+			            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+		            </div>
+		            <div class="col col-33">
+			            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+		            </div>
+		        </div>
+            </div>
+        </div>
+        </article>
+        </section>
 
+        <footer class="footer-container">
+            <div class="col .col-hp-footer-100">
+			    Copyright Footer
+		    </div>
+        </footer>
 
 
 
@@ -47,3 +117,6 @@
         <script src="" async defer></script>
     </body>
 </html>
+
+Photo by <a href="https://unsplash.com/@andrew741?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Andrew</a> on <a href="https://unsplash.com/photos/a-starry-night-sky-with-trees-IUlFmeYGDnU?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+      
