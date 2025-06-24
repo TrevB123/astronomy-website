@@ -2,8 +2,30 @@
 
 /* Universal selectors */
 
+/* unvisited link */
+a:link {
+  color: #ff8400;
+}
+
+/* visited link */
+a:visited {
+  color: #ff8400;
+}
+
+/* mouse over link */
+a:hover {
+  color: rgb(180, 180, 180);
+}
+
+/* selected link */
+a:active {
+  color: #cccccc;
+}
+
+
 * {
   font-family: 'Roboto', sans-serif;
+  color:#cccccc
 }
 
 /* Setting root variables */
@@ -18,7 +40,6 @@
   --p: 16px;
 }
 
-
 /* Overall styles for background color and other selectors - set padding and margin to zero */
 
 Body {
@@ -32,7 +53,7 @@ Body {
 .header-container {
   position: sticky;
   top: 0;
-  padding: 10px 20px;
+  padding: 20px 15px;
   background-color: rgb(0, 0, 87);
 }
 
@@ -69,12 +90,22 @@ justify-content: center;
   justify-content: center;
 }
 
+.nav-menu-button:link {
+  background-color: #ff8400; /* Orange */
+  color: black;
+}
+
+.nav-menu-button:active {
+  background-color: rgb(0, 0, 0); /* Orange */
+  color: white;
+}
+
 .nav-menu-button:hover {
   background-color: white; /* white */
 }
 
 .nav-menu-button:active {
-  background-color: rgb(0, 0, 0); /* Orange */
+  background-color: rgb(0, 0, 0); /* Black */
   color: white;
 }
 
@@ -188,7 +219,7 @@ justify-content: center;
 /* Main section - code for Flexbox various options from 3 to 1 column */
 
 .column-outer-margin {
-  margin: 30px
+  margin: 0px 30px
 }
 
 .boxes {
@@ -206,7 +237,7 @@ justify-content: center;
 	padding: 20px;
 	border-radius: 6px;
 	box-sizing: border-box;
-	background: rgb(180, 180, 180);
+	rgb(0, 0, 87)
 }
 
 .col-100 {
@@ -227,19 +258,14 @@ justify-content: center;
 
 /* Column overrides for each row and page requirement */
 
-/* Homepage */
+/* Homepage blocks */
+/* Top hero – full width block - Join Now */
 .col-hp-top-100 {
 	width: calc(100% - 30px);
   height: 100%;
   color:#ffffff;
   text-align:center;
-  border: 2px solid rgb(180, 180, 180);
-}
-
-.col-hp-top-100 .middle-align {
-  align-content: center;
-  height: 100%;
-  width: 100%;
+  border: 1px solid #999999;
 }
 
 .background-cover {
@@ -247,6 +273,108 @@ justify-content: center;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+/* Three blog posts in row – June 2025, May 2025, March 2025 */
+
+.col-1-33-blog-background {
+    position: relative;
+    z-index: 1;
+    border: 1px solid #999999
+}
+
+.col-1-33-blog-background:before {
+  content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: url('../assets/images/planets-in-a-row.jpg') center center;
+    opacity: .25;
+}
+
+.col-2-33-blog-background {
+    position: relative;
+    z-index: 1;
+    border: 1px solid #999999
+}
+
+.col-2-33-blog-background:before {
+  content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: url('../assets/images/telescope.jpg') center center;
+    opacity: .25;
+}
+
+.col-2-33-blog-background:hover {
+    background-color: #ff8400;
+}
+
+.col-3-33-blog-background {
+    position: relative;
+    z-index: 1;
+    border: 1px solid #999999
+}
+
+.col-3-33-blog-background:before {
+  content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: url('../assets/images/mars-vista.jpg') center center;
+    opacity: .35;
+}
+
+.col-3-33-blog-background:hover {
+    background-color: #ff8400;
+}
+
+/* Two blocks in a row – Our Observatory and Events & Meetings */
+
+.col-1-50-blog-background {
+    position: relative;
+    z-index: 1;
+    border: 1px solid #999999
+}
+
+.col-1-50-blog-background:before {
+  content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: url('../assets/images/observatory.jpg') center center;
+    opacity: .25;
+}
+
+.col-2-50-blog-background {
+    position: relative;
+    z-index: 1;
+    border: 1px solid #999999
+}
+
+.col-2-50-blog-background:before {
+  content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: url('../assets/images/events-and-meetings.jpg') center center;
+    opacity: .25;
 }
 
 /* @media screen and (max-width: 1000px) {
@@ -263,15 +391,17 @@ justify-content: center;
 	}
 } */
 
-
-
-
 /* Footer elements */
 
 .col-hp-footer-100 {
   width: calc(100% - 30px);
   height: 100%;
-  color:#ffffff;
+  color:#c0c0c0;
+  border: 1px solid rgb(180, 180, 180);
   text-align:center;
+  background-color: black;
 }
 
+.footer-container {
+  padding: 0px 15px;
+}
