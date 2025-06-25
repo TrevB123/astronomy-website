@@ -35,8 +35,8 @@ a:active {
   --main-bg-color: rgb(0, 0, 87);
 
   /* Default typography */
-  --h1: 25px;
-  --h2: 20px;
+  --h1: 22px;
+  --h2: 19px;
   --p: 16px;
 }
 
@@ -46,6 +46,10 @@ Body {
     background-color: var(--main-bg-color);
     padding: 0px;
     margin: 0px auto;
+    font-size: var(--p);
+    font-size: var(--h1);
+    font-size: var(--h2);
+
   /*  max-width: 1000px; commented out as can't use this property as a media query not till week 3 */
 }
 
@@ -87,30 +91,26 @@ justify-content: center;
   font-weight: bold;
   margin: 5px;
   padding: 10px 25px;
-  font-size: 16px;
+  font-size: var(--p);
   border-radius: 8px;
   text-decoration: none;
   display: flex;
   flex: center;
   justify-content: center;
+  text-align: center;
 }
 
 .nav-menu-button:link {
-  background-color: #ff8400; /* Orange */
+  background-color: #ff8400; 
   color: black;
 }
 
-.nav-menu-button:active {
-  background-color: rgb(0, 0, 0); /* Orange */
-  color: white;
-}
-
 .nav-menu-button:hover {
-  background-color: white; /* white */
+  background-color: white; 
 }
 
 .nav-menu-button:active {
-  background-color: rgb(0, 0, 0); /* Black */
+  background-color: Black; 
   color: white;
 }
 
@@ -231,10 +231,24 @@ justify-content: center;
 	padding: 30px 30px 300px;
 }
 
+/* create a flex container for the 2-col and 3 col responsive flexbox */
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0px;
+}
+
+.flex-item {
+  flex: 1 1 calc(33.333% - 20px);
+  display: flex;
+  align-items: stretch;
+}
+
 .columns {
 	margin: 0 -15px;
-	flex-wrap: wrap;
 	display: flex;
+  flex-flow: wrap;
 }
 
 .col {
@@ -245,23 +259,22 @@ justify-content: center;
 	padding: 20px;
 	border-radius: 6px;
 	box-sizing: border-box;
-	rgb(0, 0, 87)
 }
 
 .col-100 {
-	width: calc(100% - 30px);
+  flex: 1 1 calc(100% - 30px);
 }
 
 .col-50 {
-	width: calc(50% - 30px);
+  flex: 1 1 calc(50% - 30px);
 }
 
 .col-33 {
-	width: calc(33.33% - 30px);
+	flex: 1 1 calc(33.333% - 30px);
 }
 
 .col-25 {
-	width: calc(25% - 30px);
+  flex: 1 1 calc(25% - 30px);
 }
 
 /* Column overrides for each row and page requirement */
@@ -273,17 +286,30 @@ justify-content: center;
   height: 100%;
   color:#ffffff;
   text-align:center;
+  font-size: var(--h1);
   border: 1px solid #999999;
 }
 
 .background-cover {
-  background-image: url('../assets/images/starry-night.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  position: relative;
+    z-index: 1;
+    border: 1px solid #999999
+}
+
+.background-cover:before {
+   content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: url('../assets/images/starry-night.jpg') center center;
+    opacity: .70;
 }
 
 /* Three blog posts in row – June 2025, May 2025, March 2025 */
+/* First block in row of three */
 
 .col-1-33-blog-background {
     position: relative;
@@ -304,12 +330,10 @@ justify-content: center;
 }
 
 .col-1-33-blog-background:hover {
-    background-color: #ff8400;
+    background-color: #aa5800;
 }
 
-.col-1-33-blog-background :hover {
-    color: #000000;
-}
+/* Second block in row of three */
 
 .col-2-33-blog-background {
     position: relative;
@@ -330,12 +354,10 @@ justify-content: center;
 }
 
 .col-2-33-blog-background:hover {
-    background-color: #ff8400;
+    background-color: #aa5800;
 }
 
-.col-2-33-blog-background :hover {
-    color: #000000;
-}
+/* Third block in row of three */
 
 .col-3-33-blog-background {
     position: relative;
@@ -356,14 +378,12 @@ justify-content: center;
 }
 
 .col-3-33-blog-background:hover {
-    background-color: #ff8400;
-}
-
-.col-3-33-blog-background :hover {
-    color: #000000;
+    background-color: #aa5800;
 }
 
 /* Two blocks in a row – Our Observatory and Events & Meetings */
+
+/* First Block */
 
 .col-1-50-blog-background {
     position: relative;
@@ -384,12 +404,10 @@ justify-content: center;
 }
 
 .col-1-50-blog-background:hover {
-    background-color: #ff8400;
+    background-color: #aa5800;
 }
 
-.col-1-50-blog-background :hover {
-    color: #000000;
-}
+/* Second block */
 
 .col-2-50-blog-background {
     position: relative;
@@ -410,12 +428,12 @@ justify-content: center;
 }
 
 .col-2-50-blog-background:hover {
-    background-color: #ff8400;
+    background-color: #aa5800;
 }
 
-.col-2-50-blog-background :hover {
-    color: #000000;
-}
+/* Resources, About Us, Contact us in row of three */
+
+/* First block */
 
 .col-4-33-blog-background {
     position: relative;
@@ -436,12 +454,10 @@ justify-content: center;
 }
 
 .col-4-33-blog-background:hover {
-    background-color: #ff8400;
+    background-color: #aa5800;
 }
 
-.col-4-33-blog-background :hover {
-    color: #000000;
-}
+/* Second block */
 
 .col-5-33-blog-background {
     position: relative;
@@ -462,12 +478,10 @@ justify-content: center;
 }
 
 .col-5-33-blog-background:hover {
-    background-color: #ff8400;
+    background-color: #aa5800;
 }
 
-.col-5-33-blog-background :hover {
-    color: #000000;
-}
+/* Third block */
 
 .col-6-33-blog-background {
     position: relative;
@@ -488,11 +502,7 @@ justify-content: center;
 }
 
 .col-6-33-blog-background:hover {
-    background-color: #ff8400;
-}
-
-.col-6-33-blog-background :hover {
-    color: #000000;
+    background-color: #aa5800;
 }
 
 /* Body elements formatting */
@@ -504,10 +514,10 @@ justify-content: center;
  text-align: left;
 }
 
-/* Blog page elements formatting */
+/* Blog page elements formatting also used for page top image display */
 
 .blog-header-image-container {
-  width: 50%;
+  width: 70%;
   margin: 0 auto;
 }
 
@@ -516,9 +526,6 @@ justify-content: center;
   height: 100%;
   border: 1px solid #999999
 }
-
-
-
 
 
 /* Contact page elements */
@@ -539,7 +546,7 @@ justify-content: center;
     h3 {
         margin: 0;
         padding: 0;
-        color: rgba(255, 255, 255, .9);
+        color: rgba(255, 255, 255);
         font-size: 25px;
         margin-bottom: 20px;
         color:#000000;
@@ -568,18 +575,23 @@ justify-content: center;
                 display: block;
                 padding: 0;
                 margin: 0;
+                color: #ffffff;
             }
         }
         
         .name {
           input[name="name"] {
             width: 100%;
+            padding: 0px;
+            color: black;
           }
         }
 
         .email {
         input[name="email"] {
             width: 100%;
+            padding: 0px;
+            color: black;
           }
         }
 
@@ -587,20 +599,23 @@ justify-content: center;
             height: 62px;
             input[name="subject"] {
                 width: 100%;
+                padding: 0px;
+                color: black;
             }
         }
         .content {
             textarea {
                 width: 100%;
+                padding: 0px;
                 resize: none;
+                color: black;
             }
             button {
-              margin: 0;
-                float: right;
+                margin-top: 15px;
+                width: 100%;
                 background: #ff8400;
-                padding: 8px 50px;
+                padding: 10px 50px 10px 50px;
                 border: 2px solid #000000;
-                transition: all .3;
                 color:#000000;
                 border-radius: 8px;
                 font-weight: bold;
