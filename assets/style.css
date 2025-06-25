@@ -45,7 +45,8 @@ a:active {
 Body {
     background-color: var(--main-bg-color);
     padding: 0px;
-    margin: 0px;
+    margin: 0px auto;
+  /*  max-width: 1000px; commented out as can't use this property as a media query not till week 3 */
 }
 
 /* Make header section sticky and set BG color, spacing */
@@ -494,6 +495,130 @@ justify-content: center;
     color: #000000;
 }
 
+/* Body elements formatting */
+
+/* About page */
+/* Set full width column to left aligned */
+
+.col-about-100 p {
+ text-align: left;
+}
+
+/* Blog page elements formatting */
+
+.blog-header-image-container {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.blog-header-image {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #999999
+}
+
+
+
+
+
+/* Contact page elements */
+
+/* Contact form flexbox formatting */
+
+.col-outer-margin-form {
+  border: 1px solid #cccccc;
+	border-radius: 6px;
+  margin-bottom: 20px;
+}
+
+.contact-section {
+    background: #bdc3c7;
+    padding: 30px 0 50px 0;
+    text-align: center;
+    width: 100%;
+    h3 {
+        margin: 0;
+        padding: 0;
+        color: rgba(255, 255, 255, .9);
+        font-size: 25px;
+        margin-bottom: 20px;
+        color:#000000;
+    }
+
+    /* experimenting with the use of attribute selectors [] */
+    form {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        margin: 0 auto;
+        width: 100%;
+        height: 450px;
+        background: rgba(0, 0, 0, 0.30);
+        text-align: left;
+        padding: 10px 0;
+        .name,
+        .email,
+        .subject,
+        .content
+        
+         {
+            width: 80%;
+            margin: 0 auto;
+            label {
+                display: block;
+                padding: 0;
+                margin: 0;
+            }
+        }
+        
+        .name {
+          input[name="name"] {
+            width: 100%;
+          }
+        }
+
+        .email {
+        input[name="email"] {
+            width: 100%;
+          }
+        }
+
+        .subject {
+            height: 62px;
+            input[name="subject"] {
+                width: 100%;
+            }
+        }
+        .content {
+            textarea {
+                width: 100%;
+                resize: none;
+            }
+            button {
+              margin: 0;
+                float: right;
+                background: #ff8400;
+                padding: 8px 50px;
+                border: 2px solid #000000;
+                transition: all .3;
+                color:#000000;
+                border-radius: 8px;
+                font-weight: bold;
+                &:hover {
+                    background: #ffffff;
+                    border: 2px solid #000000;
+                    cursor: pointer;
+                    color:#000000
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}
+
+
+
+/* This is commented out because it uses media queries which are not until week 3 */
 /* @media screen and (max-width: 1000px) {
 	
 	.col-25 {

@@ -22,10 +22,10 @@
       
         <header class="header-container">
                 <div id="header-logo">
-                    <a href="./index.htm"><img src="./assets/images/astronomy-club-logo-sm.png" class="header-logo" width="100px" height="100px"></a>
+                    <a href="/index.htm"><img src="./assets/images/astronomy-club-logo-sm.png" class="header-logo" width="100px" height="100px"></a>
                 </div>
                 <div id="header-logo">
-                    <a href="./index.htm"><img src="./assets/images/yorkastrosoc.png" width="250px"></a>
+                    <a href="/index.htm"><img src="./assets/images/yorkastrosoc.png" width="250px"></a>
                  </div>
             <!-- menu in the header -->
               
@@ -58,7 +58,46 @@
 
        <section>
        <article>
-        <div class="column-outer-margin">
+        <div class="column-outer-margin col-outer-margin-form">
+
+                     <!-- Full width Flexbox section containing about us information and image -->
+
+		            <div class="col-about-100">
+                            <h2 style="text-align: center">Contact Us</h2>
+
+                            <h3 style="text-align:center;">By telephone: 0111 000 000</h3>
+
+                            <h3 style="text-align:center;">By email: <a href="mailto:astronomy-york@anyurl.testingemail">astronomy-york@anyurl.testingemail</a></h3>
+                        
+                            <h3 style="text-align:center;">...or use the contact form below.</h3>
+                        <!-- contact us form code -->
+                        
+                        <section class="contact-section">
+                            <h3>Contact Us</h3>
+                            <form class="form">
+                                <div class="name">
+                                    <label for="name">Name</label>
+                                    <input id="name" type="text" name="name">
+                                </div>
+                                <div class="email">
+                                    <label for="email">Email</label>
+                                    <input id="email" type="text" name="email">
+                                </div>
+                                <div class="subject">
+                                    <label for="subject">Subject</label>
+                                    <input id="subject" type="text" name="subject">
+                                </div>
+                                <div class="content">
+                                    <label id="contect" for="content">Content</label>
+                                    <textarea name="content" id="" cols="30" rows="10"></textarea>
+                                    <button type="submit">Send</button>
+
+                                </div>
+                            </form>
+                        </section>   
+                    </div>
+        </div> 
+        <div class="column-outer-margin">       
             <div class=“boxes”>
 	            <div class="columns">
 
@@ -68,69 +107,35 @@
                         <div class="middle-align">
 			            <h2>Our membership is out of this world! Join us today and we'll send you a free sky at night book. Whether you are an avid skywatcher or completely new to astronomy we're here to help you discover the secrets of the universe!</h2>
                         <div class="nav-menu-container">
-                        <a class="nav-menu-button" href="./join.htm">Join Now</a>
+                        <a class="nav-menu-button" href="#">Join Now</a>
                         </div>
                         </div>
 		            </div>
 
-                    <!-- Blog section with three flexboxes for latest three blog posts -->
-
-                    <a href="./blog-post-1.htm" style="display: contents;">
-                        <div class="col col-33 col-1-33 col-1-33-blog-background">
-			                <p>June 2025</p>
-                            <h2>What can you see in the night sky in June 2025?</h2>
-                        </div>
-                    </a>
-                    <a href="./blog-post-2.htm" style="display: contents;">
-		                <div class="col col-33 col-2-33-blog-background">
-			                <p>May 2025</p>
-                            <h2>Which is the best telescope for a beginner?</h2>
-		                </div>
-                    </a>
-                    <a href="./blog-post-3.htm" style="display: contents;">
-		                <div class="col col-33 col-3-33-blog-background">
-			                <p>March 2025</p>
-                            <h2>Is Space X on track for Mars in 2026?</h2>
-		                </div>
-                    </a>
-
-                    <!-- Events and Meetings Flexbox blocks with CTA to find out more and book -->
-
-                    <a href="./our-observatory.htm" style="display: contents;">
-		                <div class="col col-50 col-1-50-blog-background">
-                            <h2>Our Observatory</h2>
-			                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-		                </div>
-                    </a>
-                    <a href="./events-and-meetings.htm" style="display: contents;">
-		                <div class="col col-50 col-2-50-blog-background">
-                            <h2>Events & Meetings</h2>
-			                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                        </div>
-                    </a>
 
                     <!-- About Us, Contact Us, Find Us Flexbox blocks with links to find out more, contact form and page with map and directions -->
 
-                    <a href="./resources.htm" style="display: contents;">
+                    <a href="/resources.htm" style="display: contents;">
                         <div class="col col-33 col-4-33-blog-background">
                             <h2>Resources</h2>
 			                <p>We've built a large library of resources to help you on your astronomy discovery journey.</p>
 		                </div>
                     </a>
-                    <a href="./about.htm" style="display: contents;">
+                    <a href="/about.htm" style="display: contents;">
 		                <div class="col col-33 col-5-33-blog-background">
                             <h2>About Us</h2>
 			                <p>Discover how we started and key events in our history that have shaped where we are today.</p>
                         </div>
                     </a>
-		            <a href="./contact.htm" style="display: contents;">
+		            <a href="/contact.htm" style="display: contents;">
 		                <div class="col col-33 col-6-33-blog-background">
                             <h2>Contact Us</h2>
 			                <p>We'd love to hear from you! You can email, phone or use the online form to connect with us.</p>
 		                </div>
                     </a>
-		        </div>
-            </div>
+                </div>
+		    </div>
+        </div>
         </article>
         </section>
 
