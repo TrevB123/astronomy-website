@@ -9,12 +9,12 @@ a:link {
 
 /* visited link */
 a:visited {
-  color: #ff8400;
+  color: black;
 }
 
 /* mouse over link */
 a:hover {
-  color: rgb(180, 180, 180);
+  color: black;
 }
 
 /* selected link */
@@ -49,6 +49,7 @@ Body {
     font-size: var(--p);
     font-size: var(--h1);
     font-size: var(--h2);
+    max-width: 1200px;
 
   /*  max-width: 1000px; commented out as can't use this property as a media query not till week 3 */
 }
@@ -237,6 +238,7 @@ justify-content: center;
   display: flex;
   flex-wrap: wrap;
   gap: 0px;
+  width: 100%;
 }
 
 .flex-item {
@@ -259,6 +261,7 @@ justify-content: center;
 	padding: 20px;
 	border-radius: 6px;
 	box-sizing: border-box;
+  width: 100%;
 }
 
 .col-100 {
@@ -536,6 +539,7 @@ justify-content: center;
   border: 1px solid #cccccc;
 	border-radius: 6px;
   margin-bottom: 20px;
+  margin-top: 50px;
 }
 
 .contact-section {
@@ -623,8 +627,7 @@ justify-content: center;
                     background: #ffffff;
                     border: 2px solid #000000;
                     cursor: pointer;
-                    color:#000000
-                    font-weight: bold;
+                    color:#000000;
                 }
             }
         }
