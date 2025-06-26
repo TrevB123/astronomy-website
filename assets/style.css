@@ -542,6 +542,14 @@ justify-content: center;
   margin-top: 50px;
 }
 
+.form-details-link {
+  text-align: center;
+}
+
+.form-details-link a:hover {
+  color:#999999;
+}
+
 .contact-section {
     background: #bdc3c7;
     padding: 30px 0 50px 0;
