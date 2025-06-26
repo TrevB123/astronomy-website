@@ -679,3 +679,8 @@ justify-content: center;
   font-size: 12px;
 }
 
+.col-hp-footer-100 p a:hover {
+  color:#999999;
+}
+
+
