@@ -22,7 +22,6 @@ a:active {
   color: #cccccc;
 }
 
-
 * {
   font-family: 'Roboto', sans-serif;
   color:#cccccc
@@ -35,8 +34,8 @@ a:active {
   --main-bg-color: rgb(0, 0, 87);
 
   /* Default typography */
-  --h1: 22px;
-  --h2: 19px;
+  --h1: 22px; text-align: center;
+  --h2: 19px; text-align: center;
   --p: 16px;
 }
 
@@ -50,9 +49,13 @@ Body {
     font-size: var(--h1);
     font-size: var(--h2);
     max-width: 1200px;
-
-  /*  max-width: 1000px; commented out as can't use this property as a media query not till week 3 */
 }
+
+/*  Make all paragraph links readable in various states */
+
+.p p a:hover, p a:active, p a:visited {
+  color: #cccccc;
+} 
 
 /* Make header section sticky and set BG color, spacing */
 
