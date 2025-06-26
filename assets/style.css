@@ -571,12 +571,13 @@ justify-content: center;
         justify-content: space-around;
         margin: 0 auto;
         width: 100%;
-        height: 450px;
+        height: 500px;
         background: rgba(0, 0, 0, 0.30);
         text-align: left;
         padding: 10px 0;
         .name,
         .email,
+        .enquiry,
         .subject,
         .content
         
@@ -601,6 +602,14 @@ justify-content: center;
 
         .email {
         input[name="email"] {
+            width: 100%;
+            padding: 0px;
+            color: black;
+          }
+        }
+
+        .enquiry {
+          input[name="enquiry"] {
             width: 100%;
             padding: 0px;
             color: black;
