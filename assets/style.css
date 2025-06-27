@@ -55,7 +55,11 @@ Body {
 
 .p p a:hover, p a:active, p a:visited {
   color: #cccccc;
-} 
+}
+
+.li a:hover {
+  color: #cccccc;
+}
 
 /* Make header section sticky and set BG color, spacing */
 
